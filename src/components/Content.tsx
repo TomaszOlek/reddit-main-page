@@ -6,41 +6,42 @@ import PostImage1 from "../assets/PostImage1.png"
 import PostImage2 from "../assets/PostImage2.png"
 
 import Settings from "./Settings"
+import Post from "./Post"
 
 function Content() {
 
   const postsData = [
     {
-      Title: "What do you think about the new game based on the Harry Potter books and movies?",
-      PostImage: PostImage1,
-      Created: "5 minutes ago",
-      Comments: 3,
-      PostReputation: 10,
-      User: {
-        UserName: "VideoGames",
-        UserImage: User1pfp,
+      title: "What do you think about the new game based on the Harry Potter books and movies?",
+      postImage: PostImage1,
+      created: "5 minutes ago",
+      comments: 3,
+      postReputation: 10,
+      user: {
+        userName: "VideoGames",
+        userImage: User1pfp,
       }
     },
     {
-      Title: "A probe is about to be sent into space. On board will be a disk and a computer with a message from humanity. What are you sending?",
-      PostImage: "",
-      Created: "7 minutes ago",
-      Comments: 1,
-      PostReputation: 2,
-      User: {
-        UserName: "Green",
-        UserImage: User2pfp,
+      title: "A probe is about to be sent into space. On board will be a disk and a computer with a message from humanity. What are you sending?",
+      postImage: "",
+      created: "7 minutes ago",
+      comments: 1,
+      postReputation: 2,
+      user: {
+        userName: "Green",
+        userImage: User2pfp,
       }
     },
     {
-      Title: "What's your favorite shrek movie?",
-      PostImage: PostImage2,
-      Created: "25 minutes ago",
-      Comments: 15,
-      PostReputation: 33,
-      User: {
-        UserName: "Movie",
-        UserImage: User3pfp,
+      title: "What's your favorite shrek movie?",
+      postImage: PostImage2,
+      created: "25 minutes ago",
+      comments: 15,
+      postReputation: 33,
+      user: {
+        userName: "Movie",
+        userImage: User3pfp,
       }
     }
   ]
@@ -55,14 +56,7 @@ function Content() {
 
       {/* posts */}
       {postsData.map((post, index) => (
-        <div key={index}>
-          <div></div>
-          <div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
+        <Post post={post} key={index} />
       ))}
     </div>
   )
