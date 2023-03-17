@@ -1,0 +1,43 @@
+
+
+.header{
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  border-bottom: 2px solid #E3E3E3;
+}
+
+.logo{
+  font-size: $font-size2;
+  font-weight: $medium;
+}
+
+.hamburger .line{
+  width: 28px;
+  height: 2px;
+  background-color: #000000;
+  display: block;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover{
+  cursor: pointer;
+}
+
+#hamburger.is-active .line:nth-child(2){
+  opacity: 0;
+}
+
+#hamburger.is-active .line:nth-child(1){
+  transform: translateY(7px) rotate(45deg);
+}
+
+#hamburger.is-active .line:nth-child(3){
+  transform: translateY(-7px) rotate(-45deg);
+}

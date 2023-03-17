@@ -1,0 +1,78 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  border-bottom: 2px solid #E3E3E3;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.hamburger .line {
+  width: 28px;
+  height: 2px;
+  background-color: #000000;
+  display: block;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+#hamburger.is-active .line:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger.is-active .line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+#hamburger.is-active .line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.content {
+  padding: 24px 16px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  background-color: #F5F5F5;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.button {
+  padding: 12px 16px;
+  border-radius: 50px;
+  border: 2px solid #FF4500;
+  color: #FF4500;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.button-fill {
+  border: 2px solid #FF4500;
+  background-color: #FF4500;
+  color: #FFFFFF;
+}/*# sourceMappingURL=styles.css.map */
