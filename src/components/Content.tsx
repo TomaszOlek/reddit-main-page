@@ -5,9 +5,7 @@ import User3pfp from "../assets/User3pfp.png"
 import PostImage1 from "../assets/PostImage1.png"
 import PostImage2 from "../assets/PostImage2.png"
 
-import Flame from "../assets/Flame.svg"
-import More from "../assets/More.svg"
-import ArrowDown from "../assets/ArrowDown.svg"
+import Settings from "./Settings"
 
 function Content() {
 
@@ -50,19 +48,9 @@ function Content() {
   return (
     <div className="content">
       {/* Section */}
-      <div>
+      <div className="content-settings">
         <h2>Popular</h2>
-        <div>
-          <div>
-            <img src={Flame}/>
-            <p>Popular</p>
-            <img src={ArrowDown}/>
-          </div>
-          <div>
-            <img src={More}/>
-            <img src={ArrowDown}/>
-          </div>
-        </div>
+        <Settings />
       </div>
 
       {/* posts */}
