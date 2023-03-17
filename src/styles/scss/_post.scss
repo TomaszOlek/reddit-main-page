@@ -6,7 +6,6 @@
   display: flex;
   gap: 16px;
 
-
   &-rep{
     display: flex;
     flex-direction: column;
@@ -19,7 +18,8 @@
     }
 
     & img:hover{
-      filter: invert(44%) sepia(60%) saturate(679%) hue-rotate(172deg) brightness(87%) contrast(91%);
+      cursor: pointer;
+      filter: $blue-primary-filter;
     }
   }
 
@@ -39,6 +39,9 @@
 
     & p{
       margin-left: auto;
+      font-weight: $regular;
+      font-size: $font-size5;
+      color: $gray-primary;
     }
   }
 
@@ -61,17 +64,33 @@
   &-actions{
     display: flex;
     gap: 12px;
+  }
 
-    & img{
+  &-action{
+    cursor: pointer;
+    display: flex;
+
+    & p{
+      color: $gray-primary;
+    }
+
+    &:hover > p{
+      color: $blue-secondary;
+    }
+
+    &:hover > img{
+      filter: $blue-secondary-filter;
+    }
+    
+    &:nth-last-child(1){
       margin-left: auto;
     }
-  }
-  &-action{
-    display: flex;
   }
 }
 
 .container{
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   gap: 16px;

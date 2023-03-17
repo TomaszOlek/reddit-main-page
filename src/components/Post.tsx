@@ -45,10 +45,10 @@ function Post({ post }: PostProps) {
         </div>
 
         <div className="post-actions">
-          <div className="post-action"><img src={Comment} /><p>Comments</p></div>
+          <div className="post-action"><img src={Comment} /><p>{post.comments} Comments</p></div>
           <div className="post-action"><img src={Share} /><p>Share</p></div>
           <div className="post-action"><img src={Save} /><p>Save</p></div>
-          <img src={More} />
+          <div className="post-action"><img src={More} /></div>
         </div>
       </div>
     </div>

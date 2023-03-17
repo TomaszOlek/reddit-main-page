@@ -1,7 +1,6 @@
 
 
 .content{
-  
   &-settings{
     padding: 24px 16px;
 
@@ -17,10 +16,18 @@
 }
 
 .settings__option{
+  cursor: pointer;
   display: flex;
   align-items: center;
-
   gap: 6px;
 
   color: $gray-primary;
+
+  &:hover > p{
+    color: $blue-primary;
+  }
+
+  &:hover > img{
+    filter: $blue-secondary-filter;
+  }
 }

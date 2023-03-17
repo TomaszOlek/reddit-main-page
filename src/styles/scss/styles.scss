@@ -30,15 +30,31 @@ p, h1, h2, h3, h4, h5, h6{
   padding: 12px 16px;
   border-radius: 50px;
 
-  border: 2px solid $red-primary;
-  color: $red-primary;
+  border: 2px solid $blue-primary;
+  color: $blue-primary;
 
   font-weight: $regular;
   font-size: $font-size3;
+
+  &:hover{
+    border: 2px solid $blue-secondary;
+  }
+  &:active{
+    border: 2px solid #94BAE7;
+  }
 }
 
 .button-fill{
-  border: 2px solid $red-primary;
-  background-color: $red-primary;
+  border: 2px solid $blue-primary;
+  background-color: $blue-primary;
   color: $white-primary;
+
+  &:hover{
+    border: 2px solid $blue-secondary;
+    background-color: $blue-secondary;
+  }
+  &:active{
+    border: 2px solid #94BAE7;
+    background-color: #94BAE7;
+  }
 }
