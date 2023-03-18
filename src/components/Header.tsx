@@ -1,16 +1,17 @@
-import { useState } from "react";
 
-function Header() {
+interface HeaderType {
+  menuOpen: boolean
+  handleMenuToggle: () => void;
+}
 
-  const [handelMenu, setHandelMenu] = useState(false)
-
+function Header( {menuOpen, handleMenuToggle}:HeaderType ){
 
   return (
     <div className="header">
       <div 
-        className={`hamburger ${handelMenu && 'is-active'} `} 
+        className={`hamburger ${menuOpen && 'is-active'} `} 
         id="hamburger"
-        onClick={() =>setHandelMenu(prev => !prev)}
+        onClick={() => handleMenuToggle()}
       >
         <span className="line"></span>
         <span className="line"></span>

@@ -1,0 +1,128 @@
+
+$navbar_transition: left 0.6s;
+$navbar_offset: -337px;
+$navbar_width: 335px;
+
+.navbar{
+  height: calc(100vh - 220px);
+  padding-top: 50px;
+  padding-bottom: 100px;
+  width: $navbar_width;
+
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  
+  overflow: scroll;
+  position: fixed;
+  top: 70px;
+
+  background: $white-primary;
+  border: 1px solid $gray1;
+
+  &-settings{
+    position: fixed;
+    bottom: 50px;
+  }
+
+  .navbar-section:nth-last-child(1){
+    width: $navbar_width;
+    padding: 10px 0 35px 0;
+
+    position: fixed;
+    justify-content: flex-end;
+    bottom: 0px;
+    left: 0px;
+    z-index: 2;
+
+    background-color: $white-primary;
+    border: 1px solid $gray1;
+
+    transition: $navbar_transition;
+  }
+
+  &-section{
+    display: flex;
+    flex-direction: column;
+
+    &__text{
+      padding: 0 50px 10px 50px;
+
+      font-weight: $regular;
+      font-size: $font-size5;
+      color: $gray-secondary;
+      text-transform: uppercase;
+    }
+
+    &-folder{
+      padding: 6px 50px;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+    
+      background-color: $white-primary;
+
+      & > .folder-name{
+        text-decoration: none;
+        text-transform: capitalize;
+
+        font-weight: $medium;
+        font-size: $font-size3;
+
+        color: $black-primary;
+      }
+
+      & .link-spacing:hover .folder-link{
+        color: $black-primary;
+      }
+    
+      &:hover{
+        cursor: pointer;
+        background-color: #F5F5F5;
+      }
+    
+      & > img{
+        width: 30px;
+        height: 30px;
+    
+        filter: $black-primary-filter;
+      }
+
+      & > img:nth-last-child(1){
+        margin-left: auto;
+      }
+    }
+  }
+
+  &-close{
+    left: $navbar_offset;
+
+    .navbar-section:nth-last-child(1){
+      left: $navbar_offset;
+    }
+  }
+  
+  &-open{
+    left: 0;
+
+    .navbar-section:nth-last-child(1){
+      left: 0px;
+    }
+  }
+
+  transition: $navbar_transition;
+}
+
+.link-spacing{
+  padding: 10px 50px 10px 92px;
+
+  & .folder-link{
+    font-weight: $regular;
+    font-size: $font-size4;
+    color: $gray-secondary;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+}

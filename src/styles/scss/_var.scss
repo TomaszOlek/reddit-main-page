@@ -5,7 +5,7 @@ $white-primary: #FFFFFF;
 $white-secondary: #F5F5F5;
 
 $black-primary: #000000;
-// $black-secondary: #;
+$black-primary-filter: brightness(0);
 
 $gray-primary: #9C9C9C;
 $gray-secondary: #A8A8A8;
@@ -15,10 +15,10 @@ $gray3: #E3E3E3;
 $gray4: #E1E1E1;
 
 $blue-primary: #3179CC;
-$blue-primary-filter: invert(44%) sepia(60%) saturate(679%) hue-rotate(172deg) brightness(87%) contrast(91%);
+$blue-primary-filter: invert(43%) sepia(49%) saturate(1727%) hue-rotate(212deg) brightness(93%) contrast(97%);
 
 $blue-secondary: #0159BF;
-$blue-secondary-filter: invert(21%) sepia(31%) saturate(6334%) hue-rotate(203deg) brightness(99%) contrast(99%);
+$blue-secondary-filter: invert(6%) sepia(91%) saturate(4932%) hue-rotate(216deg) brightness(97%) contrast(115%);
 
 $red-primary: #FF4500;
 

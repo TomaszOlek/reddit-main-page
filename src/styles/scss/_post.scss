@@ -69,6 +69,7 @@
   &-action{
     cursor: pointer;
     display: flex;
+    align-items: center;
 
     & p{
       color: $gray-primary;

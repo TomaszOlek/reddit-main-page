@@ -1,11 +1,16 @@
 
 .header{
+  position: sticky;
+  top: 0;
   display: flex;
+
+  background-color: $white-primary;
+  border-bottom: 2px solid #E3E3E3;
 
   align-items: center;
   gap: 12px;
   padding: 13px 16px;
-  border-bottom: 2px solid #E3E3E3;
+  z-index: 10;
 }
 
 .logo{
