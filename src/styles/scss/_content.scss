@@ -1,5 +1,4 @@
 
-
 .content{
   &-settings{
     padding: 24px 16px;
@@ -14,26 +13,12 @@
     &-options{
       padding: 24px 0 2px 0;
       display: flex;
+      gap: 14px;
   
-      justify-content: space-between;
+      & > div:nth-last-child(1){
+        margin-left: auto;
+      }
     }
-  }
-}
-
-.settings__option{
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-
-  color: $gray-primary;
-
-  &:hover > p{
-    color: $blue-primary;
-  }
-
-  &:hover > img{
-    filter: $blue-secondary-filter;
   }
 }
 
@@ -52,7 +37,7 @@
     padding: 32px 0;
     margin-top: 45px;
 
-    overflow: scroll;
+    overflow-y: scroll;
 
     box-sizing: border-box;
 
@@ -146,6 +131,7 @@
     }
 
     &-content{
+      cursor: pointer;
       height: calc(100% - 32px);
       padding: 16px;
 

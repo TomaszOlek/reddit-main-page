@@ -81,21 +81,10 @@
 .content-settings-options {
   padding: 24px 0 2px 0;
   display: flex;
-  justify-content: space-between;
+  gap: 14px;
 }
-
-.settings__option {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #9C9C9C;
-}
-.settings__option:hover > p {
-  color: #3179CC;
-}
-.settings__option:hover > img {
-  filter: invert(6%) sepia(91%) saturate(4932%) hue-rotate(216deg) brightness(97%) contrast(115%);
+.content-settings-options > div:nth-last-child(1) {
+  margin-left: auto;
 }
 
 @media (min-width: 1365px) {
@@ -106,7 +95,7 @@
     min-width: 255px;
     padding: 32px 0;
     margin-top: 45px;
-    overflow: scroll;
+    overflow-y: scroll;
     box-sizing: border-box;
     position: sticky;
     top: 200px;
@@ -179,6 +168,7 @@
     z-index: 1;
   }
   .trending__post-content {
+    cursor: pointer;
     height: calc(100% - 32px);
     padding: 16px;
     position: absolute;
@@ -318,15 +308,15 @@
   }
 }
 .navbar {
-  height: calc(100vh - 300px);
+  height: calc(100vh - 316px);
   padding: 50px 0;
   width: 335px;
   display: flex;
   flex-direction: column;
   gap: 50px;
-  overflow: scroll;
+  overflow-y: scroll;
   position: fixed;
-  top: 70px;
+  top: 86px;
   background: #FFFFFF;
   border: 1px solid #CECECE;
   transition: left 0.6s;
@@ -428,6 +418,99 @@
   filter: brightness(0);
 }
 
+.option-selected {
+  background-color: #efefef !important;
+}
+
+.settings-selected-lenguage {
+  color: #3179CC;
+}
+.settings-selected-lenguage:hover {
+  color: #3179CC !important;
+}
+
+.settings__option {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #9C9C9C;
+}
+.settings__option:hover > img {
+  filter: invert(6%) sepia(91%) saturate(4932%) hue-rotate(216deg) brightness(97%) contrast(115%);
+}
+.settings__option:hover > p {
+  color: #3179CC;
+}
+.settings__option p {
+  font-weight: 500;
+  font-size: 14px;
+}
+.settings-popular {
+  padding: 8px 24px 8px 20px;
+  border-radius: 50px;
+  background-color: #F5F5F5;
+}
+.settings-popular:hover {
+  background-color: #efefef;
+}
+.settings-popular img {
+  filter: invert(6%) sepia(91%) saturate(4932%) hue-rotate(216deg) brightness(97%) contrast(115%);
+}
+.settings-popular p {
+  color: #3179CC;
+}
+.settings-lenguage {
+  padding: 8px 19px 8px 24px;
+  border-radius: 50px;
+  background-color: #F5F5F5;
+  position: relative;
+}
+.settings-lenguage:hover {
+  background-color: #efefef;
+}
+.settings-lenguage img {
+  filter: invert(6%) sepia(91%) saturate(4932%) hue-rotate(216deg) brightness(97%) contrast(115%);
+}
+.settings-lenguage .name {
+  color: #3179CC;
+}
+.settings-lenguage-options {
+  width: 104px;
+  height: 200px;
+  padding: 15px 25px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid #CECECE;
+  border-radius: 8px;
+  position: absolute;
+  top: 45px;
+  left: 10px;
+}
+.settings-lenguage-options > p {
+  padding: 5px 0;
+}
+.settings-lenguage-options > p:hover {
+  color: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 14px 14px transparent;
+  border: solid 4px transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 14px 14px #bbbbbe;
+  border: solid 4px transparent;
+  border-radius: 14px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: #000000;
@@ -435,13 +518,12 @@ body {
   padding: 0;
   background-color: #F5F5F5;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 
 p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
-}
-
-*::-webkit-scrollbar {
-  display: none;
 }
 
 .button {

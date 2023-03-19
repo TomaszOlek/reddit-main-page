@@ -23,7 +23,7 @@ function Content({ isMobile }: {
         <div className="content-container__posts">
           <div className="content-settings">
             <h2>Popular post</h2>
-            <Settings />
+            <Settings isMobile={isMobile} />
           </div>
 
           <div className="content-posts">
