@@ -1,5 +1,4 @@
-
-.navbar{
+.navbar {
   height: calc(100vh - 316px);
   padding: 50px 0;
   width: $navbar_width;
@@ -7,7 +6,7 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  
+
   overflow-y: scroll;
   position: fixed;
   top: 86px;
@@ -15,12 +14,12 @@
   background: $white-primary;
   border: 1px solid $gray1;
 
-  &-settings{
+  &-settings {
     position: fixed;
     bottom: 50px;
   }
 
-  .navbar-section:nth-last-child(1){
+  .navbar-section:nth-last-child(1) {
     width: $navbar_width;
     padding: 10px 0 35px 0;
 
@@ -36,11 +35,11 @@
     transition: $navbar_transition;
   }
 
-  &-section{
+  &-section {
     display: flex;
     flex-direction: column;
 
-    &__text{
+    &__text {
       padding: 0 50px 10px 50px;
 
       font-weight: $regular;
@@ -50,18 +49,18 @@
     }
   }
 
-  &-close{
+  &-close {
     left: $navbar_offset;
 
-    .navbar-section:nth-last-child(1){
+    .navbar-section:nth-last-child(1) {
       left: $navbar_offset;
     }
   }
-  
-  &-open{
+
+  &-open {
     left: 0;
 
-    .navbar-section:nth-last-child(1){
+    .navbar-section:nth-last-child(1) {
       left: 0px;
     }
   }

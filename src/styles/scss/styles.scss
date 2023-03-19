@@ -21,25 +21,31 @@
   border-radius: 14px;
 }
 
-
-body{
-  font-family: 'Roboto', sans-serif;
-  color: $black-primary;
-
+body {
   margin: 0;
   padding: 0;
+
   background-color: $white-secondary;
+
+  font-family: 'Roboto', sans-serif;
+  color: $black-primary;
 
   &::-webkit-scrollbar {
     display: none;
   }
 }
 
-p, h1, h2, h3, h4, h5, h6{
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
-.button{
+.button {
   cursor: pointer;
   padding: 12px 16px;
   border-radius: 50px;
@@ -50,28 +56,30 @@ p, h1, h2, h3, h4, h5, h6{
   font-weight: $regular;
   font-size: $font-size3;
 
-  &:hover{
+  &:hover {
     border: 2px solid $blue-secondary;
   }
-  &:active{
+
+  &:active {
     border: 2px solid #94BAE7;
   }
 }
 
-.button:nth-last-child(2){
+.button:nth-last-child(2) {
   margin-left: auto;
 }
 
-.button-fill{
+.button-fill {
   border: 2px solid $blue-primary;
   background-color: $blue-primary;
   color: $white-primary;
 
-  &:hover{
+  &:hover {
     border: 2px solid $blue-secondary;
     background-color: $blue-secondary;
   }
-  &:active{
+
+  &:active {
     border: 2px solid #94BAE7;
     background-color: #94BAE7;
   }
@@ -79,19 +87,17 @@ p, h1, h2, h3, h4, h5, h6{
 
 
 // Tablet - 768 x 1024 
-@media (min-width: 768px) {
-
-}
+@media (min-width: 768px) {}
 
 // Laptops
 @media (min-width: 1365px) {
 
-  .button{
+  .button {
     padding: 14px 50px;
   }
 
-  .button:nth-last-child(2){
+  .button:nth-last-child(2) {
     margin-left: 0px;
   }
-  
+
 }

@@ -1,26 +1,24 @@
 import { useEffect, useState } from "react";
-import Search from "../assets/search.svg"
+import Search from "../assets/search.svg";
 
 interface HeaderType {
-  menuOpen: boolean
+  menuOpen: boolean;
   handleMenuToggle: () => void;
-  isMobile: boolean
+  isMobile: boolean;
 }
 
-function Header( {menuOpen, handleMenuToggle, isMobile }:HeaderType ){
-
+function Header({ menuOpen, handleMenuToggle, isMobile }: HeaderType) {
   const [searchInput, setSearchInput] = useState("");
 
   const searchItems = (searchValue: string) => {
-    setSearchInput(searchValue)
-  }
+    setSearchInput(searchValue);
+  };
 
   return (
     <div className="header">
-
-      { isMobile && 
-        <div 
-          className={`hamburger ${menuOpen && 'is-active'} `} 
+      {isMobile && (
+        <div
+          className={`hamburger ${menuOpen && "is-active"} `}
           id="hamburger"
           onClick={() => handleMenuToggle()}
         >
@@ -28,29 +26,29 @@ function Header( {menuOpen, handleMenuToggle, isMobile }:HeaderType ){
           <span className="line"></span>
           <span className="line"></span>
         </div>
-      }
+      )}
       <h1 className="logo">reddit</h1>
 
-      { !isMobile && 
+      {!isMobile && (
         <div className="header-serch">
-          <div style={{position:"relative", height:"0", width:"0"}}>
-            <img src={Search} className="search__icon"/>
+          <div style={{ position: "relative", height: "0", width: "0" }}>
+            <img src={Search} className="search__icon" />
           </div>
 
-          <input 
-            onChange={(e) => searchItems(e.target.value)}
+          <input
+            onChange={e => searchItems(e.target.value)}
             value={searchInput}
             type="text"
             placeholder="Search"
             className="header-serch__input"
           />
         </div>
-      }
+      )}
 
       <a className="button">Log in</a>
       <a className="button button-fill">Register</a>
     </div>
-  )
+  );
 }
 
 export default Header;

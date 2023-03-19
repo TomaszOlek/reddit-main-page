@@ -1,23 +1,18 @@
+import User1pfp from "../assets/User1pfp.png";
+import User2pfp from "../assets/User2pfp.png";
+import User3pfp from "../assets/User3pfp.png";
+import PostImage1 from "../assets/PostImage1.png";
+import PostImage2 from "../assets/PostImage2.png";
 
-import User1pfp from "../assets/User1pfp.png"
-import User2pfp from "../assets/User2pfp.png"
-import User3pfp from "../assets/User3pfp.png"
-import PostImage1 from "../assets/PostImage1.png"
-import PostImage2 from "../assets/PostImage2.png"
+import Settings from "./Settings";
+import TrendingPosts from "./TrendingPosts";
+import SideMenu from "./SideMenu";
+import Post from "./Post";
 
-import Settings from "./Settings"
-import TrendingPosts from "./TrendingPosts"
-import SideMenu from "./SideMenu"
-import Post from "./Post"
-
-function Content({ isMobile }: {
-  isMobile: boolean
-}) {
-
+function Content({ isMobile }: { isMobile: boolean }) {
   return (
     <div className="content">
-
-      {!isMobile && <TrendingPosts/> }
+      {!isMobile && <TrendingPosts />}
 
       <div className="content-container">
         <div className="content-container__posts">
@@ -32,18 +27,21 @@ function Content({ isMobile }: {
             ))}
           </div>
         </div>
-        
-        {!isMobile && <div className="content-posts-side_menu">
-          <SideMenu/>
-        </div>}
+
+        {!isMobile && (
+          <div className="content-posts-side_menu">
+            <SideMenu />
+          </div>
+        )}
       </div>
     </div>
-  )
+  );
 }
 
 const postsData = [
   {
-    title: "What do you think about the new game based on the Harry Potter books and movies?",
+    title:
+      "What do you think about the new game based on the Harry Potter books and movies?",
     postImage: PostImage1,
     created: "5 minutes ago",
     comments: 3,
@@ -51,10 +49,11 @@ const postsData = [
     user: {
       userName: "VideoGames",
       userImage: User1pfp,
-    }
+    },
   },
   {
-    title: "A probe is about to be sent into space. On board will be a disk and a computer with a message from humanity. What are you sending?",
+    title:
+      "A probe is about to be sent into space. On board will be a disk and a computer with a message from humanity. What are you sending?",
     postImage: "",
     created: "7 minutes ago",
     comments: 1,
@@ -62,7 +61,7 @@ const postsData = [
     user: {
       userName: "Green",
       userImage: User2pfp,
-    }
+    },
   },
   {
     title: "What's your favorite shrek movie?",
@@ -73,8 +72,8 @@ const postsData = [
     user: {
       userName: "Movie",
       userImage: User3pfp,
-    }
-  }
-]
+    },
+  },
+];
 
 export default Content;

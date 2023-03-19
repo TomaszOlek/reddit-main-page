@@ -1,21 +1,20 @@
-
-.content{
-  &-settings{
+.content {
+  &-settings {
     padding: 24px 16px;
 
     border-bottom: 4px solid $gray3;
 
-    & > h2{
+    &>h2 {
       font-weight: $medium;
       font-size: $font-size1;
     }
 
-    &-options{
+    &-options {
       padding: 24px 0 2px 0;
       display: flex;
       gap: 14px;
-  
-      & > div:nth-last-child(1){
+
+      &>div:nth-last-child(1) {
         margin-left: auto;
       }
     }
@@ -23,13 +22,11 @@
 }
 
 // Tablet - 768 x 1024 
-@media (min-width: 768px) {
-
-}
+@media (min-width: 768px) {}
 
 // Laptops
 @media (min-width: 1365px) {
-  .side_menu{
+  .side_menu {
     content: "";
     width: 19vw;
     max-height: 570px;
@@ -49,35 +46,35 @@
     border-radius: 8px;
   }
 
-  .content{
+  .content {
     margin-left: calc($navbar_width + 2px);
-    padding:50px;
+    padding: 50px;
 
-    &-posts{
+    &-posts {
       display: flex;
       flex-direction: column;
       gap: 24px;
     }
 
-    &-container{
+    &-container {
       display: flex;
       justify-content: space-between;
       gap: 50px;
       margin-top: 50px;
 
-      &__posts{
+      &__posts {
         flex: 1;
       }
     }
 
-    &-trending{
-      & > p{
+    &-trending {
+      &>p {
         font-weight: $medium;
         font-size: $font-size2;
         margin-bottom: 24px;
       }
 
-      &__container{
+      &__container {
         display: flex;
         flex-direction: row;
         gap: 18px;
@@ -85,16 +82,16 @@
       }
     }
 
-    &-settings{
+    &-settings {
       padding: 0 0 32px 0;
       border-bottom: none;
 
-      & > h2{
+      &>h2 {
         margin-bottom: 24px;
         font-size: $font-size2;
       }
 
-      &-options{
+      &-options {
         border: 1px solid #CECECE;
         border-radius: 8px;
         background-color: #fff;
@@ -104,23 +101,23 @@
   }
 
 
-  .trending__post{
+  .trending__post {
     content: "";
     position: relative;
     // //I've Missed one pair of braces and I was sitting here for 1 hour to figure out if calc() is calculating wrong ...
-    width: calc((100vw - ( (3 * $content_trending_gap) + ($navbar_width + 1px) + (2 * 50px) )) / 4);
-    height: calc((215/241) * ((100vw - ( (3 * $content_trending_gap) + ($navbar_width + 1px) + (2 * 50px) )) / 4));
+    width: calc((100vw - ((3 * $content_trending_gap) + ($navbar_width + 1px) + (2 * 50px))) / 4);
+    height: calc((215/241) * ((100vw - ((3 * $content_trending_gap) + ($navbar_width + 1px) + (2 * 50px))) / 4));
 
     background-color: black;
 
     border-radius: 20px;
     overflow: hidden;
 
-    &:hover .trending__post-background{
+    &:hover .trending__post-background {
       filter: opacity(0.85);
     }
 
-    &-background{
+    &-background {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -130,7 +127,7 @@
       z-index: 1;
     }
 
-    &-content{
+    &-content {
       cursor: pointer;
       height: calc(100% - 32px);
       padding: 16px;
@@ -144,27 +141,29 @@
       flex-direction: column;
       justify-content: space-between;
 
-      &-text{
-        & > h2{
+      &-text {
+        &>h2 {
           font-weight: 500;
           font-size: $font-size2;
           color: $white-primary;
         }
-        & > p{
+
+        &>p {
           font-weight: 400;
           font-size: $font-size4;
           color: #9C9C9C;
         }
       }
 
-      &-user{
+      &-user {
         display: flex;
         gap: 6px;
 
-        & > img{
+        &>img {
           border-radius: 50%;
         }
-        & > p{
+
+        &>p {
           color: $white-primary;
         }
       }
@@ -173,20 +172,20 @@
 }
 
 @media (min-width: 1900px) {
-  .content-posts-side_menu{
+  .content-posts-side_menu {
     position: relative;
     min-width: 255px;
     width: 19vw;
     height: 312px;
   }
 
-  .side_menu{
+  .side_menu {
     position: fixed;
     top: 135px;
   }
 
-  .trending__post{
-    width: calc((100vw - ((3 * $content_trending_gap) + ($navbar_width + 1px) + (2 * 50px) + 19vw + 50px )) / 4);
-    height: calc((215/241) * ((100vw - ( (3 * $content_trending_gap) + ($navbar_width + 1px) + (2 * 50px) + 19vw + 50px )) / 4));
+  .trending__post {
+    width: calc((100vw - ((3 * $content_trending_gap) + ($navbar_width + 1px) + (2 * 50px) + 19vw + 50px)) / 4);
+    height: calc((215/241) * ((100vw - ((3 * $content_trending_gap) + ($navbar_width + 1px) + (2 * 50px) + 19vw + 50px)) / 4));
   }
 }

@@ -1,19 +1,16 @@
-
-import CreateFolderList from "./CreateFolderList"
+import CreateFolderList from "./CreateFolderList";
 
 function SideMenu() {
   return (
     <div className="side_menu">
-      {
-        folder.map((entry, index) => ( 
-          <CreateFolderList entry={entry} key={index} styling="sidemenu" />
-        ))
-      }
+      {folder.map((entry, index) => (
+        <CreateFolderList entry={entry} key={index} styling="sidemenu" />
+      ))}
     </div>
-  )
+  );
 }
 
-export default SideMenu
+export default SideMenu;
 
 const folder = [
   {
@@ -23,216 +20,259 @@ const folder = [
       {
         type: "anchor",
         name: "Ask Reddit",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "No Stupid Questions",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Destiny The Game",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Axplain Like I'm Five",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Ask Men",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "League of Legends",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Minecraft",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Politics",
-        link: "#"
+        link: "#",
       },
     ],
-  },{
+  },
+  {
     type: "folder",
     name: "Gaming",
     items: [
       {
         type: "anchor",
         name: "PC Gaming",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Console Gaming",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Mobile Gaming",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Esports",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Gaming News",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Gaming Reviews",
-        link: "#"
+        link: "#",
       },
     ],
-  },{
+  },
+  {
     type: "folder",
     name: "Sports",
     items: [
       {
         type: "anchor",
         name: "Football (Soccer)",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Basketball",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "American Football",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Baseball",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Tennis",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Rugby",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Motorsports",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Olympic Sports",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Sports News",
-        link: "#"
-      }
+        link: "#",
+      },
     ],
-  },{
+  },
+  {
     type: "folder",
     name: "Tv",
     items: [
       {
         type: "anchor",
         name: "TV Shows",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "TV Series",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Streaming Services",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Documentaries",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Talk Shows",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Reality TV",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "TV News and Reviews",
-        link: "#"
+        link: "#",
       },
     ],
-  },{
+  },
+  {
     type: "folder",
     name: "Travel",
     items: [
       {
         type: "anchor",
         name: "Destinations",
-        link: "#"
-      },      {
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Travel Tips and Tricks",
-        link: "#"
-      },      {
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Budget Travel",
-        link: "#"
-      },      {
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Luxury Travel",
-        link: "#"
-      },      {
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Travel Photography",
-        link: "#"
+        link: "#",
       },
     ],
-  },{
+  },
+  {
     type: "folder",
     name: "Health & Fitness",
     items: [
       {
         type: "anchor",
         name: "Nutrition and Diet",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Exercise and Workout Routines",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Mental Health",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Yoga and Meditation",
-        link: "#"
+        link: "#",
       },
     ],
-  },{
+  },
+  {
     type: "folder",
     name: "Fashion",
     items: [
       {
         type: "anchor",
         name: "Streetwear",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Accessories",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Sneakers and Footwear",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Beauty and Makeup",
-        link: "#"
-      },{
+        link: "#",
+      },
+      {
         type: "anchor",
         name: "Fashion News and Trends",
-        link: "#"
+        link: "#",
       },
     ],
   },
-]
+];

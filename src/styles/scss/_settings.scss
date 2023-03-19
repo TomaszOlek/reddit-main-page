@@ -1,18 +1,17 @@
-
-.option-selected{
+.option-selected {
   background-color: $white3 !important;
 }
 
-.settings-selected-lenguage{
+.settings-selected-lenguage {
   color: $blue-primary;
 
-  &:hover{
+  &:hover {
     color: $blue-primary !important;
   }
 }
 
-.settings{
-  &__option{
+.settings {
+  &__option {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -20,56 +19,60 @@
 
     color: $gray-primary;
 
-    &:hover > img{
+    &:hover>img {
       filter: $blue-secondary-filter;
     }
-    &:hover > p{
+
+    &:hover>p {
       color: $blue-primary;
     }
 
-    & p{
+    & p {
       font-weight: 500;
       font-size: 14px;
     }
   }
 
-  &-popular{
+  &-popular {
     padding: 8px 24px 8px 20px;
     border-radius: 50px;
 
     background-color: #F5F5F5;
 
-    &:hover{
+    &:hover {
       background-color: $white3;
     }
 
-    & img{
+    & img {
       filter: $blue-secondary-filter;
     }
-    & p{
+
+    & p {
       color: #3179CC;
     }
   }
-  &-lenguage{
+
+  &-lenguage {
     padding: 8px 19px 8px 24px;
     border-radius: 50px;
-    
+
     background-color: #F5F5F5;
 
     position: relative;
 
-    &:hover{
+    &:hover {
       background-color: $white3;
     }
 
-    & img{
+    & img {
       filter: $blue-secondary-filter;
     }
-    & .name{
+
+    & .name {
       color: #3179CC;
     }
 
-    &-options{
+    &-options {
       width: 104px;
       height: 200px;
       padding: 15px 25px;
@@ -86,20 +89,20 @@
       top: 45px;
       left: 10px;
 
-      & > p{
+      &>p {
         padding: 5px 0;
       }
 
-      & > p:hover{
+      &>p:hover {
         color: $black-primary;
       }
     }
   }
+
   // &-new{
-    
+
   // }
   // &-top{
 
   // }
 }
-
