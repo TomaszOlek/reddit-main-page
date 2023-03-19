@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Search from "../assets/search.svg";
+import Search from "../assets/Search.svg";
 
 interface HeaderType {
   menuOpen: boolean;
