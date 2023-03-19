@@ -1,0 +1,75 @@
+
+
+.folder{
+  display: flex;
+  flex-direction: column;
+
+  & .navbar-item{
+    padding: 6px 50px;
+
+    & .folder-link{
+      padding-left: 42px;
+    }
+  }
+
+  & .sidemenu-item{
+    padding: 8px 32px;
+
+    & .folder-link{
+      padding-left: 12px;
+    }
+  }
+
+  &-name{
+    text-decoration: none;
+    text-transform: capitalize;
+
+    font-weight: $regular;
+    font-size: $font-size3;
+
+    color: $black-primary;
+  }
+
+  &-link{
+    text-decoration: none;
+    text-transform: capitalize;
+
+    font-weight: $regular;
+    font-size: $font-size4;
+
+    color: $gray-secondary;
+  }
+
+  &-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+
+    &:hover{
+      cursor: pointer;
+      background-color: #F5F5F5;
+
+      & .folder-link {
+        color: $black-primary;
+      }
+    }
+
+    & > img:nth-last-child(1){
+      margin-left: auto;
+    } 
+
+    & > img{
+      width: 24px;
+      height: 24px;
+
+      filter: $black-primary-filter;
+    }
+
+    &__icon{
+      width: 30px;
+      height: 30px;
+      filter: $black-primary-filter;
+    }
+  }
+}

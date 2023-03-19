@@ -44,3 +44,47 @@
 #hamburger.is-active .line:nth-child(3){
   transform: translateY(-7px) rotate(-45deg);
 }
+
+// Tablet - 768 x 1024 
+@media (min-width: 768px) {
+
+}
+
+// Laptops
+@media (min-width: 1365px) {
+
+  .logo{
+    margin-right: auto;
+    font-weight: $medium;
+    font-size: $font-size0;
+  }
+
+  .header{
+    justify-content: flex-end;
+    padding: 17px 55px ;
+
+    &-serch{
+      width: calc(50% - 108px);
+      margin-right: 104px;
+  
+      &__input{
+        width: 100%;
+        padding: 14px 0px 14px 54px;
+
+        background: #F5F5F5;
+        border: none;
+        border-radius: 50px;
+
+        &:focus{
+          outline: 1px solid $blue-primary;
+        }
+      }
+    }
+  }
+
+  .search__icon{
+    position: absolute;
+    left: 19px;
+    top: 12px;
+  }
+}

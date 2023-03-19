@@ -1,7 +1,5 @@
-import { useState } from "react"
 
-import ArrowDown from "../assets/ArrowDown.svg"
-import ArrowUp from "../assets/ArrowUp.svg"
+import CreateFolderList from "./CreateFolderList"
 
 import Flame from "../assets/Flame.svg"
 import Controler from "../assets/Controler.svg"
@@ -15,72 +13,24 @@ import More from "../assets/More.svg"
 import Settings from "../assets/Settings.svg"
 import Import from "../assets/Import.svg"
 
-interface EntryProps {
-  entry: {
-    type: string;
-    name: string;
-    icon?: string;
-    link?: string;
-    links?: EntryProps["entry"][];
-  };
-}
 
-function Entry({ entry }: EntryProps) {
-  const [isExpanded, setIsExpanded] = useState(false)
-
-  return(
-    <div>
-      <div onClick={() => setIsExpanded(!isExpanded)} >
-        <div className={`navbar-section-folder ${ !entry.icon && "link-spacing" }`}>
-          {entry.icon &&  <img src={entry.icon} />}
-
-          {entry.type === "folder" ? 
-            <p className="folder-name">{entry.name}</p>
-            :
-            <a className={`folder-link ${entry.icon && "folder-name"} `} href={`${entry.link}`}>{entry.name}</a>
-          }
-
-          {entry.type === "folder" && <>{
-            isExpanded ? 
-            <img src={ArrowUp}/>
-            : 
-            <img src={ArrowDown}/>
-          }</>}
-        </div>
-      </div>
-
-      {isExpanded && (<>
-        { entry.links && entry.type === "folder" &&
-          entry.links.map((item)=>(
-            <Entry entry={item} />
-          ))
-        }
-      </>)}
-    </div>
-  )
-}
-
-
-function NavBar({menuOpen}: {
+function NavBar({menuOpen, isMobile}: {
   menuOpen: boolean
+  isMobile: boolean
 }) {
   return (
-    <div className={`navbar ${menuOpen ? "navbar-open" : "navbar-close"}`}>
+    <div className={`navbar ${!isMobile ? "navbar-open" : (menuOpen ? "navbar-open" : "navbar-close")}`}>
       {
-        directions.map((entry, index) => (<div className="navbar-section">
-          <p className="navbar-section__text">{entry.name}</p>
+        directions.map((entry, index) => (
+          <div className="navbar-section">
+            <p className="navbar-section__text">{entry.name}</p>
 
-          {entry.categores.map((item) =>
-            <Entry entry={item}/>
-          )}
-        </div>))
+            {entry.categores.map(( item, index ) =>
+              <CreateFolderList entry={item} key={index} styling="navbar"/>
+            )}
+          </div>
+        ))
       }
-
-      {/* <div className="navbar-settings">
-        {settings.map((item)=>(
-          <Entry entry={item}/>
-        ))}
-      </div> */}
     </div>
   )
 }
@@ -93,7 +43,7 @@ const directions = [
     categores: [
       {
         type: "anchor",
-        name: "popular",
+        name: "Popular",
         link: "#",
         icon: Flame,
       },
@@ -106,7 +56,7 @@ const directions = [
         type: "folder",
         name: "Gaming",
         icon: Controler,
-        links: [{
+        items: [{
             type: "anchor",
             name: "PC Gaming",
             link: "#",
@@ -131,7 +81,7 @@ const directions = [
         type: "folder",
         name: "Sports",
         icon: Basicle,
-        links: [{
+        items: [{
             type: "anchor",
             name: "Football (Soccer)",
             link: "#",
@@ -164,7 +114,7 @@ const directions = [
         type: "folder",
         name: "Business, Economics",
         icon: Graph,
-        links: [{
+        items: [{
             type: "anchor",
             name: "Stocks and Investing",
             link: "#",
@@ -193,7 +143,7 @@ const directions = [
         type: "folder",
         name: "Crypto",
         icon: Wallet, 
-        links: [{
+        items: [{
             type: "anchor",
             name: "Cordano",
             link: "#",
@@ -218,7 +168,7 @@ const directions = [
         type: "folder",
         name: "Television",
         icon: TV, 
-        links: [{
+        items: [{
             type: "anchor",
             name: "TV Shows",
             link: "#",
@@ -251,7 +201,7 @@ const directions = [
         type: "folder",
         name: "Celebrity",
         icon: Star, 
-        links: [{
+        items: [{
             type: "anchor",
             name: "Hollywood News",
             link: "#",
@@ -280,7 +230,7 @@ const directions = [
         type: "folder",
         name: "More Topics",
         icon: More, 
-        links: [{
+        items: [{
             type: "anchor",
             name: "Technology",
             link: "#",
@@ -319,7 +269,7 @@ const directions = [
         type: "folder",
         name: "Settings",
         icon: Settings,
-        links: [{
+        items: [{
             type: "anchor",
             name: "Account Settings",
             link: "#",
@@ -351,7 +301,7 @@ const directions = [
       },
       {
         type: "anchor",
-        name: "get app",
+        name: "Get App",
         link: "#",
         icon: Import,
       },

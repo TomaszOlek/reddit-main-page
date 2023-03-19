@@ -1,12 +1,7 @@
 
-$navbar_transition: left 0.6s;
-$navbar_offset: -337px;
-$navbar_width: 335px;
-
 .navbar{
-  height: calc(100vh - 220px);
-  padding-top: 50px;
-  padding-bottom: 100px;
+  height: calc(100vh - 300px);
+  padding: 50px 0;
   width: $navbar_width;
 
   display: flex;
@@ -53,47 +48,6 @@ $navbar_width: 335px;
       color: $gray-secondary;
       text-transform: uppercase;
     }
-
-    &-folder{
-      padding: 6px 50px;
-
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 10px;
-    
-      background-color: $white-primary;
-
-      & > .folder-name{
-        text-decoration: none;
-        text-transform: capitalize;
-
-        font-weight: $medium;
-        font-size: $font-size3;
-
-        color: $black-primary;
-      }
-
-      & .link-spacing:hover .folder-link{
-        color: $black-primary;
-      }
-    
-      &:hover{
-        cursor: pointer;
-        background-color: #F5F5F5;
-      }
-    
-      & > img{
-        width: 30px;
-        height: 30px;
-    
-        filter: $black-primary-filter;
-      }
-
-      & > img:nth-last-child(1){
-        margin-left: auto;
-      }
-    }
   }
 
   &-close{
@@ -113,16 +67,4 @@ $navbar_width: 335px;
   }
 
   transition: $navbar_transition;
-}
-
-.link-spacing{
-  padding: 10px 50px 10px 92px;
-
-  & .folder-link{
-    font-weight: $regular;
-    font-size: $font-size4;
-    color: $gray-secondary;
-    text-decoration: none;
-    text-transform: capitalize;
-  }
 }

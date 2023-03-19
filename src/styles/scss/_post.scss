@@ -96,3 +96,25 @@
   flex-direction: column;
   gap: 16px;
 }
+
+// Tablet - 768 x 1024 
+@media (min-width: 768px) {
+
+}
+
+// Laptops
+@media (min-width: 1365px) {
+
+  .post{
+    background-color: $white-primary;
+    border: 1px solid #CECECE;
+    border-radius: 8px;
+
+    padding: 24px;
+
+    &-content-title{
+      font-size: $font-size2;
+    }
+  }
+  
+}
