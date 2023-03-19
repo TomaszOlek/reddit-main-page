@@ -85,6 +85,17 @@ h6 {
   }
 }
 
+//I didn't feel like adding new class for Post-Settings and Post-Reputations separately,
+//for more context I did this page in 2 days
+.selected-option {
+  & p {
+    color: $blue-primary !important;
+  }
+
+  & img {
+    filter: $blue-secondary-filter !important;
+  }
+}
 
 // Tablet - 768 x 1024 
 @media (min-width: 768px) {}

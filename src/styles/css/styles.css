@@ -454,12 +454,6 @@
 .settings-popular:hover {
   background-color: #efefef;
 }
-.settings-popular img {
-  filter: invert(6%) sepia(91%) saturate(4932%) hue-rotate(216deg) brightness(97%) contrast(115%);
-}
-.settings-popular p {
-  color: #3179CC;
-}
 .settings-lenguage {
   padding: 8px 19px 8px 24px;
   border-radius: 50px;
@@ -564,6 +558,13 @@ h6 {
 .button-fill:active {
   border: 2px solid #94BAE7;
   background-color: #94BAE7;
+}
+
+.selected-option p {
+  color: #3179CC !important;
+}
+.selected-option img {
+  filter: invert(6%) sepia(91%) saturate(4932%) hue-rotate(216deg) brightness(97%) contrast(115%) !important;
 }
 
 @media (min-width: 1365px) {

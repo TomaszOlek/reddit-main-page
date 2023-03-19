@@ -9,9 +9,20 @@ function Settings({ isMobile }: { isMobile: boolean }) {
   const [browsingLocation, setBrowsingLocation] = useState("Poland");
   const [showBrowsingLocations, setShowBrowsingLocations] = useState(false);
 
+  const [isPopularSelected, setIsPopularSelected] = useState(true);
+  const [isNewSelected, setIsNewSelected] = useState(false);
+  const [isTopSelected, setIsTopSelected] = useState(false);
+
+  console.log(isNewSelected);
+
   return (
     <div className="content-settings-options">
-      <div className="settings__option settings-popular">
+      <div
+        className={`settings__option settings-popular ${
+          isPopularSelected && "selected-option"
+        }`}
+        onClick={() => setIsPopularSelected(!isPopularSelected)}
+      >
         <img src={Flame} />
         <p>Popular</p>
         {isMobile && <img src={ArrowDown} />}
@@ -45,12 +56,22 @@ function Settings({ isMobile }: { isMobile: boolean }) {
             )}
           </div>
 
-          <div className="settings__option settings-new">
+          <div
+            className={`settings__option settings-new ${
+              isNewSelected && "selected-option"
+            }`}
+            onClick={() => setIsNewSelected(!isNewSelected)}
+          >
             <img src={New} />
             <p>New</p>
           </div>
 
-          <div className="settings__option settings-top">
+          <div
+            className={`settings__option settings-new ${
+              isTopSelected && "selected-option"
+            }`}
+            onClick={() => setIsTopSelected(!isTopSelected)}
+          >
             <img src={Top} />
             <p>Top</p>
           </div>

@@ -4,6 +4,7 @@ import Comment from "../assets/Comment.svg";
 import Share from "../assets/Share.svg";
 import Save from "../assets/Save.svg";
 import More from "../assets/More.svg";
+import { useState } from "react";
 
 interface PostProps {
   post: {
@@ -20,12 +21,48 @@ interface PostProps {
 }
 
 function Post({ post }: PostProps) {
+  const [isRepUpSelected, setIsRepUpSelected] = useState(false);
+  const [isRepDownSelected, setIsRepDownSelected] = useState(false);
+
+  const [repPoints, setRepPoints] = useState(post.postReputation);
+
+  //Is there a better way to do this?
+  const handelRep = (rep: "Up" | "Down") => {
+    if (rep === "Up" && isRepUpSelected) {
+      setIsRepUpSelected(false);
+      setRepPoints(repPoints - 1);
+    } else if (rep === "Up" && isRepDownSelected) {
+      setIsRepUpSelected(true);
+      setIsRepDownSelected(false);
+      setRepPoints(repPoints + 2);
+    } else if (rep === "Up" && !isRepDownSelected && !isRepUpSelected) {
+      setIsRepUpSelected(true);
+      setRepPoints(repPoints + 1);
+    } else if (rep === "Down" && isRepUpSelected) {
+      setIsRepUpSelected(false);
+      setIsRepDownSelected(true);
+      setRepPoints(repPoints - 2);
+    } else if (rep === "Down" && isRepDownSelected) {
+      setIsRepDownSelected(false);
+      setRepPoints(repPoints + 1);
+    } else {
+      setIsRepDownSelected(true);
+      setRepPoints(repPoints - 1);
+    }
+  };
+
+  console.log(isRepUpSelected);
+
   return (
     <div className="post">
       <div className="post-rep">
-        <img src={RepUp} />
-        <p>{post.postReputation}</p>
-        <img src={RepDown} />
+        <div className={`${isRepUpSelected && "selected-option"}`}>
+          <img src={RepUp} alt="RepUp" onClick={() => handelRep("Up")} />
+        </div>
+        <p>{repPoints}</p>
+        <div className={`${isRepDownSelected && "selected-option"}`}>
+          <img src={RepDown} alt="RepDown" onClick={() => handelRep("Down")} />
+        </div>
       </div>
       <div className="container">
         <div className="post-user">
