@@ -10,25 +10,19 @@ function App() {
     setMenuOpen(!menuOpen);
   };
 
-  const handleBackButton = (event: PopStateEvent) => {
-    if (menuOpen) {
-      // event.preventDefault();
-      // setMenuOpen(false);
-    }
-  };
-
   useEffect(() => {
-    if (menuOpen) {
-      window.history.pushState({ menuOpen }, "");
-      window.addEventListener("popstate", handleBackButton);
-    } else {
-      window.history.back();
-      window.removeEventListener("popstate", handleBackButton);
-    }
+    window.history.pushState({ menuOpen }, "");
+
+    const handlePopState = (event: PopStateEvent) => {
+      if (event.state?.menuOpen !== undefined) {
+        setMenuOpen(event.state.menuOpen);
+      }
+    };
+
+    window.addEventListener("popstate", handlePopState);
 
     return () => {
-      window.history.back();
-      window.removeEventListener("popstate", handleBackButton);
+      window.removeEventListener("popstate", handlePopState);
     };
   }, [menuOpen]);
 
