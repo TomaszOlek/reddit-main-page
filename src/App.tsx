@@ -12,8 +12,8 @@ function App() {
 
   const handleBackButton = (event: PopStateEvent) => {
     if (menuOpen) {
-      event.preventDefault();
-      setMenuOpen(false);
+      // event.preventDefault();
+      // setMenuOpen(false);
     }
   };
 
