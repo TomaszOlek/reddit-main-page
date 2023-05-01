@@ -11,24 +11,26 @@ function App() {
   };
 
   const handleBackButton = (event: PopStateEvent) => {
-    event.preventDefault();
-    setMenuOpen(false);
+    if (menuOpen) {
+      event.preventDefault();
+      setMenuOpen(false);
+    }
   };
 
-  // useEffect(() => {
-  //   if (menuOpen) {
-  //     window.history.pushState({ menuOpen }, "");
-  //     window.addEventListener("popstate", handleBackButton);
-  //   } else {
-  //     window.history.back();
-  //     window.removeEventListener("popstate", handleBackButton);
-  //   }
+  useEffect(() => {
+    if (menuOpen) {
+      window.history.pushState({ menuOpen }, "");
+      window.addEventListener("popstate", handleBackButton);
+    } else {
+      window.history.back();
+      window.removeEventListener("popstate", handleBackButton);
+    }
 
-  //   return () => {
-  //     window.history.back();
-  //     window.removeEventListener("popstate", handleBackButton);
-  //   };
-  // }, [menuOpen]);
+    return () => {
+      window.history.back();
+      window.removeEventListener("popstate", handleBackButton);
+    };
+  }, [menuOpen]);
 
   const [width, setWidth] = useState<number>(window.innerWidth);
   const isMobile = width <= 1364;
