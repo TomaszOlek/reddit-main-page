@@ -1,7 +1,7 @@
-import Header from "./components/Header"
-import NavBar from "./components/NavBar"
-import Content from "./components/Content"
-import { useEffect, useState } from "react"
+import Header from "./components/Header";
+import NavBar from "./components/NavBar";
+import Content from "./components/Content";
+import { useEffect, useState } from "react";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,12 +10,12 @@ function App() {
     setMenuOpen(!menuOpen);
   };
 
-  useEffect(() => {
-    const handleBackButton = (event: PopStateEvent) => {
-      event.preventDefault();
-      setMenuOpen(false);
-    };
+  const handleBackButton = (event: PopStateEvent) => {
+    event.preventDefault();
+    setMenuOpen(false);
+  };
 
+  useEffect(() => {
     if (menuOpen) {
       window.history.pushState({ menuOpen }, "");
       window.addEventListener("popstate", handleBackButton);
@@ -38,21 +38,25 @@ function App() {
   }
 
   useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
+    window.addEventListener("resize", handleWindowSizeChange);
     return () => {
-        window.removeEventListener('resize', handleWindowSizeChange);
-    }
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
   }, []);
 
   return (
     <div className="App">
-      <Header handleMenuToggle={handleMenuToggle} menuOpen={menuOpen} isMobile={isMobile}/>
+      <Header
+        handleMenuToggle={handleMenuToggle}
+        menuOpen={menuOpen}
+        isMobile={isMobile}
+      />
       <>
-        <NavBar menuOpen={menuOpen} isMobile={isMobile}/>
-        <Content isMobile={isMobile}/>
+        <NavBar menuOpen={menuOpen} isMobile={isMobile} />
+        <Content isMobile={isMobile} />
       </>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
