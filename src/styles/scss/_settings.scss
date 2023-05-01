@@ -25,6 +25,7 @@
 
     &:hover>p {
       color: $blue-primary;
+      transition: all 0.3s;
     }
 
     & p {
@@ -39,11 +40,11 @@
 
     background-color: #F5F5F5;
 
+    transition: all 0.3s;
+
     &:hover {
       background-color: $white3;
     }
-
-
   }
 
   &-lenguage {
@@ -53,6 +54,8 @@
     background-color: #F5F5F5;
 
     position: relative;
+
+    transition: all 0.3s;
 
     &:hover {
       background-color: $white3;
@@ -92,11 +95,4 @@
       }
     }
   }
-
-  // &-new{
-
-  // }
-  // &-top{
-
-  // }
 }

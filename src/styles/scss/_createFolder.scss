@@ -44,6 +44,8 @@
     align-items: center;
     gap: 12px;
 
+    transition: all 0.3s;
+
     &:hover {
       cursor: pointer;
       background-color: #F5F5F5;

@@ -1,5 +1,5 @@
 .navbar {
-  height: calc(100vh - 316px);
+  height: calc(100vh - 304px);
   padding: 50px 0;
   width: $navbar_width;
 
@@ -9,10 +9,12 @@
 
   overflow-y: scroll;
   position: fixed;
-  top: 86px;
+  top: 74px;
 
   background: $white-primary;
   border: 1px solid $gray1;
+
+  z-index: 3;
 
   &-settings {
     position: fixed;

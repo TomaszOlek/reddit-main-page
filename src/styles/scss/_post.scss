@@ -70,12 +70,14 @@
     display: flex;
     align-items: center;
 
+
     & p {
       color: $gray-primary;
     }
 
     &:hover>p {
       color: $blue-secondary;
+      transition: all 0.4s;
     }
 
     &:hover>img {
